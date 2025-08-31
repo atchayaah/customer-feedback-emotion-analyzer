@@ -1,4 +1,6 @@
-"""------------------ Flask web server for the Emotion Detection application.-------------------- """
+"""
+Flask web server for the Emotion Detection application.
+"""
 from flask import Flask, request
 from EmotionDetection import emotion_detector
 

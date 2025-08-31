@@ -11,8 +11,9 @@ app = Flask(__name__)
 @app.route("/emotionDetector", methods=["GET"])
 def detect_emotion():
     """
-    Flask endpoint that analyzes input text using emotion_detector
-    and returns formatted results or an error message.
+    Flask endpoint that accepts 'text' as a query parameter,
+    calls the emotion_detector function, and returns
+    formatted emotion results or an error message.
     """
     text = request.args.get("text", default="", type=str)
     result = emotion_detector(text)

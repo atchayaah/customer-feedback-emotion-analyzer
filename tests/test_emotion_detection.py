@@ -1,4 +1,6 @@
-"""------------------- Unit tests for the Emotion Detection function.---------------------- """
+"""
+Unit tests for the Emotion Detection function.
+"""
 import unittest
 from EmotionDetection import emotion_detector
 

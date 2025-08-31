@@ -1,3 +1,6 @@
+"""
+Emotion detection utility using IBM Watson NLP (embedded service).
+"""
 import requests
 
 WATSON_URL = (

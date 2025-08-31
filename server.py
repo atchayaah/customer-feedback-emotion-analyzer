@@ -1,5 +1,6 @@
 """
 Flask web server for the Emotion Detection application.
+Provides the /emotionDetector endpoint.
 """
 from flask import Flask, request
 from EmotionDetection import emotion_detector
@@ -9,6 +10,10 @@ app = Flask(__name__)
 
 @app.route("/emotionDetector", methods=["GET"])
 def detect_emotion():
+    """
+    Flask endpoint that analyzes input text using emotion_detector
+    and returns formatted results or an error message.
+    """
     text = request.args.get("text", default="", type=str)
     result = emotion_detector(text)
 

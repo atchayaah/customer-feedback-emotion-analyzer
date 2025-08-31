@@ -13,15 +13,15 @@ WATSON_HEADERS = {"grpc-metadata-mm-model-id": "emotion_aggregated-workflow_lang
 def emotion_detector(text_to_analyse):
     """
     Call Watson NLP EmotionPredict and return scores + dominant emotion.
-    For blank input, return all None values.
+    For blank input, return 0 scores and None as dominant_emotion.
     """
     if not text_to_analyse:
         return {
-            "anger": None,
-            "disgust": None,
-            "fear": None,
-            "joy": None,
-            "sadness": None,
+            "anger": 0,
+            "disgust": 0,
+            "fear": 0,
+            "joy": 0,
+            "sadness": 0,
             "dominant_emotion": None,
         }
 
@@ -32,31 +32,32 @@ def emotion_detector(text_to_analyse):
         data = response.json()
         emotions = data["emotionPredictions"][0]["emotion"]
 
-        anger = emotions.get("anger", 0)
-        disgust = emotions.get("disgust", 0)
-        fear = emotions.get("fear", 0)
-        joy = emotions.get("joy", 0)
-        sadness = emotions.get("sadness", 0)
-
         scores = {
-            "anger": anger,
-            "disgust": disgust,
-            "fear": fear,
-            "joy": joy,
-            "sadness": sadness,
+            "anger": emotions.get("anger", 0),
+            "disgust": emotions.get("disgust", 0),
+            "fear": emotions.get("fear", 0),
+            "joy": emotions.get("joy", 0),
+            "sadness": emotions.get("sadness", 0),
         }
         scores["dominant_emotion"] = max(scores, key=scores.get)
         return scores
 
-    if response.status_code == 400:  # blank input case
+    if response.status_code == 400:  # blank/invalid input case
         return {
-            "anger": None,
-            "disgust": None,
-            "fear": None,
-            "joy": None,
-            "sadness": None,
+            "anger": 0,
+            "disgust": 0,
+            "fear": 0,
+            "joy": 0,
+            "sadness": 0,
             "dominant_emotion": None,
         }
 
-    return {"anger": None, "disgust": None, "fear": None,
-            "joy": None, "sadness": None, "dominant_emotion": None}
+    # Fallback in case of other errors
+    return {
+        "anger": 0,
+        "disgust": 0,
+        "fear": 0,
+        "joy": 0,
+        "sadness": 0,
+        "dominant_emotion": None,
+    }

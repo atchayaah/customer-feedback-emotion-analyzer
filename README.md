@@ -22,10 +22,10 @@ An AI-powered web application that analyzes customer feedback and detects the un
 -**Backend**: Python (Flask)
 
 -**Libraries & Tools**:
-        -pandas, numpy – Data -preprocessing
-        -scikit-learn – ML models
-        -nltk / spacy – NLP processing
-        -Flask / Streamlit – Web app deployment
+        pandas, numpy – Data -preprocessing
+        scikit-learn – ML models
+        nltk / spacy – NLP processing
+        Flask / Streamlit – Web app deployment
 
 
 ## 📝Project Structure
@@ -57,11 +57,11 @@ The app will be available at: 👉 http://127.0.0.1:5000/
 
 ## 📝 Model training & Use Case
 
-Preprocess text data (tokenization, stopword removal, lemmatization).
+• Preprocess text data (tokenization, stopword removal, lemmatization).
 
-Train machine learning models (Naive Bayes, Logistic Regression, or Neural Networks).
+• Train machine learning models (Naive Bayes, Logistic Regression, or Neural Networks).
 
-Save the trained model using Pickle/Joblib for deployment.
+• Save the trained model using Pickle/Joblib for deployment.
 
 **Use Cases**
 

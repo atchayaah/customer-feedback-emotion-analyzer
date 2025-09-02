@@ -85,9 +85,8 @@ The app will be available at:
 📌 Social media monitoring – Track public emotions on brands/events.
 
 📌 Chatbots & virtual assistants – Enhance emotional intelligence.
-## 📜License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+## 📜License
 
 The project was developed as part of the **IBM GEN AI ENGINEERING on Coursera**.  
  

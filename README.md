@@ -17,11 +17,11 @@ An AI-powered web application that analyzes customer feedback and detects the un
 
 ## 📝Tech Stack
 
-🔹**Frontend**: HTML
+-**Frontend**: HTML
 
-🔹**Backend**: Python (Flask)
+-**Backend**: Python (Flask)
 
-🔹**Libraries & Tools**:
+-**Libraries & Tools**:
         -pandas, numpy – Data -preprocessing
         -scikit-learn – ML models
         -nltk / spacy – NLP processing

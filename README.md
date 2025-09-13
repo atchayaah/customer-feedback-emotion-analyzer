@@ -31,15 +31,7 @@ An AI-powered web application that analyzes customer feedback and detects the un
 
     Flask / Streamlit – Web app deployment
 
-
-## 📝Project Structure
-    │── Emotion-Detector/
-    │── templates/            
-    │── model/                 
-    │── app.py                 
-    │── requirements.txt      
-    │── README.md             
-    │── dataset.csv           
+   
 
 ## 📝Deployment
 
